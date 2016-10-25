@@ -51,7 +51,7 @@ function update() {
     
     //Kollission med h1
     //if((plX >= h1X) && (plX <= h1X + 30) (plX >= h1Y + 50) (plY <= h1Y + 30)) {
-    //    h1VX = 0;
+        //h1VX = 0;
     //}
 }
 
@@ -60,7 +60,7 @@ function keyDown(e) {
     
     //Piltangent upp = Hoppa
     if(e.keyCode == 38) {
-        plVY = -18;
+        plVY = -13;
     }
     
     //Rörelse fram
@@ -74,7 +74,7 @@ function keyUp(e) {
     
     //Släpp piltangent upp = Fall
     if(e.keyCode == 38) {
-        plVY = 18;
+        plVY = 8;
     }
     
     //Stanna
