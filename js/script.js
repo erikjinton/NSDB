@@ -37,6 +37,15 @@ function update() {
     //Hoppa
     plY = plY + plVY;
     
+    //Kollission med h1
+    if((plX + 25 >= h1X) && (plX <= h1X +30)) {
+        h1VX = 0;
+    }
+    
+    if(plY + 80 >= h1Y) {
+        plVY = 0;
+    }
+    
     //Rörelse
     h1X = h1X + h1VX;
     
@@ -49,18 +58,6 @@ function update() {
     if(plY <= 0) {
         plY = 0;
     }
-    
-    //Kollission med h1
-<<<<<<< HEAD
-    //if((plX >= h1X) && (plX <= h1X + 30) (plX >= h1Y + 50) (plY <= h1Y + 30)) {
-        //h1VX = 0;
-    //}
-=======
-    if((plX >= h1X - 25) && (plX <= h1X + 30)) {
-        h1VX = 0;
-    }
-    // && (plX <= h1X - 30) (plX >= h1Y + 50) (plY <= h1Y + 30)
->>>>>>> origin/master
 }
 
 
@@ -68,18 +65,15 @@ function keyDown(e) {
     
     //Piltangent upp = Hoppa
     if(e.keyCode == 38) {
-<<<<<<< HEAD
-        plVY = -13;
-=======
-        //plVY = -18;
-        //plY = hopp;
+
+        plVY = -18;
+        plY = hopp;
         
->>>>>>> origin/master
     }
     
     //Rörelse fram
     if(e.keyCode == 39) {
-        h1VX = -13;
+        h1VX = -8;
     }
 }
 
