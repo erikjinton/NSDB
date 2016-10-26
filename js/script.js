@@ -38,11 +38,12 @@ function update() {
     plY = plY + plVY;
     
     //Kollission med h1
-    if((plX + 25 >= h1X) && (plX <= h1X +30)) {
+    if((plX + 30 >= h1X) && (plX <= h1X +30) && (plY + 80 >= h1Y)) {
         h1VX = 0;
     }
     
-    if(plY + 80 >= h1Y) {
+    //Kollission med H1 i Y-led
+    if((plY + 80 >= h1Y) && (plX + 25 >= h1X) && (plX <= h1X + 25)) {
         plVY = 0;
     }
     
@@ -52,6 +53,7 @@ function update() {
     //Stanna plY mot underkant
     if(plY >= 520) {
         plVY = 0;
+        plY = 520;
     }
     
     //Stanna mot överkant
