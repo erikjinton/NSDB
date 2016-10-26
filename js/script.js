@@ -45,6 +45,7 @@ function update() {
     //Kollission med H1 i Y-led
     if((plY + 80 >= h1Y) && (plX + 25 >= h1X) && (plX <= h1X + 25)) {
         plVY = 0;
+        plY = h1Y -80;
     }
     
     //Rörelse
@@ -77,6 +78,11 @@ function keyDown(e) {
     if(e.keyCode == 39) {
         h1VX = -8;
     }
+    
+    //Rörelse bak
+    if(e.keyCode == 37) {
+        h1VX = 8;
+    }
 }
 
 
@@ -89,6 +95,11 @@ function keyUp(e) {
     
     //Stanna
     if(e.keyCode == 39) {
+        h1VX = 0;
+    }
+    
+    if(e.keyCode == 37) {
+        
         h1VX = 0;
     }
 }
