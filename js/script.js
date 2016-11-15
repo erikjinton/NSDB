@@ -37,15 +37,14 @@ function update() {
     //Hoppa
     plY = plY + plVY;
     
-    //Kollission med h1
-    if((plX + 30 >= h1X) && (plX <= h1X +30) && (plY + 80 >= h1Y)) {
-        h1VX = 0;
-    }
-    
     //Kollission med H1 i Y-led
     if((plY + 80 >= h1Y) && (plX + 25 >= h1X) && (plX <= h1X + 25)) {
-        plVY = 0;
         plY = h1Y -80;
+    }
+    
+    //Kollission med h1
+    if((plX + 30 >= h1X) && (plX < h1X +30) && (plY + 80 > h1Y)) {
+        h1VX = 0;
     }
     
     //Rörelse
