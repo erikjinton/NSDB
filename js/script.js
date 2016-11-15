@@ -67,10 +67,8 @@ function keyDown(e) {
     
     //Piltangent upp = Hoppa
     if(e.keyCode == 38) {
-
         plVY = -18;
         plY = hopp;
-        
     }
     
     //Rörelse fram
@@ -102,3 +100,4 @@ function keyUp(e) {
         h1VX = 0;
     }
 }
+//test
